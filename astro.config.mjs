@@ -5,6 +5,5 @@ import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   site: 'https://dobrygazon.github.io',
-  base: '/communium',
   integrations: [mdx(), sitemap(), tailwind()],
 });
