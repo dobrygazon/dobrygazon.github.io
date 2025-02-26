@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://astro-nano-demo.vercel.app",
+  site: 'https://dobrygazon.github.io',
+  base: '/communium',
   integrations: [mdx(), sitemap(), tailwind()],
 });
