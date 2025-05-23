@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import CyberCard from "./CyberCard.astro";
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -8,16 +9,22 @@ type Props = {
 const { entry } = Astro.props;
 const isProject = entry.collection === "projects";
 const hasThumbnail = isProject && entry.data.thumbnail;
+const isGrowthInitiative = isProject && entry.data.title === "30x Growth Initiative";
 ---
 
 <a href={`/${entry.collection}/${entry.slug}`} class="group flex flex-col rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
-  {hasThumbnail && (
+  {hasThumbnail && !isGrowthInitiative && (
     <div class="w-full">
       <img 
         src={entry.data.thumbnail} 
         alt={`${entry.data.title} thumbnail`}
         class="w-full h-48 object-cover rounded-t-lg"
       />
+    </div>
+  )}
+  {isGrowthInitiative && (
+    <div class="w-full h-48">
+      <CyberCard />
     </div>
   )}
   <div class="flex flex-col p-4">

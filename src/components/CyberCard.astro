@@ -1,0 +1,160 @@
+<div class="cyber-card-wrapper">
+  <div class="card-container">
+    <div class="card">
+      <div class="glow-effect"></div>
+      
+      <div class="chart-area">
+        <div class="grid-lines">
+          <div class="grid-line"></div>
+          <div class="grid-line"></div>
+          <div class="grid-line"></div>
+          <div class="grid-line"></div>
+        </div>
+        
+        <div class="chart-line">
+          <svg width="100%" height="100%" viewBox="0 0 280 100">
+            <path class="animated-path" id="chartPath" d="M0,85 L20,80 L30,75 L40,73 L50,68 L60,65 L70,55 L80,58 L90,50 L100,45 L110,42 L120,35 L130,38 L140,30 L150,25 L160,27 L170,22 L180,18 L190,20 L200,15 L210,12 L220,14 L230,10 L240,8 L250,10 L260,7 L270,5 L280,0"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cyber-card-wrapper {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a3b47, #2c5a6b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px 7px 0px 0px;
+  }
+
+  .card-container {
+    perspective: 1000px;
+    width: 70%;
+  }
+
+  .card {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(135deg, #4a7c8a, #6ba0b0);
+    border-radius: 7px;
+    position: relative;
+    transform: rotateX(10deg) rotateY(-5deg);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.05) 50%, 
+      rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 16px 16px 0 0;
+  }
+
+  .chart-area {
+    position: absolute;
+    top: 22px;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+  }
+
+  .grid-lines {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .grid-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0, 255, 200, 0.2);
+  }
+
+  .grid-line:nth-child(1) { top: 0; }
+  .grid-line:nth-child(2) { top: 25%; }
+  .grid-line:nth-child(3) { top: 50%; }
+  .grid-line:nth-child(4) { top: 75%; }
+
+  .chart-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .animated-path {
+    fill: none;
+    stroke: #00ffc8;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 200, 0.6));
+  }
+
+  .glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+      rgba(0, 255, 200, 0.1) 0%, 
+      transparent 70%);
+    border-radius: 16px;
+    opacity: 0;
+    animation: glow-pulse 2s ease-out infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+</style>
+
+<script>
+  function animatePath() {
+    const element = document.getElementById('chartPath');
+    if (!element) return;
+    
+    const path = element as unknown as SVGPathElement;
+    const pathLength = path.getTotalLength();
+    
+    // Set up the starting position
+    path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+    path.style.strokeDashoffset = `${pathLength}`;
+    
+    // Trigger the animation
+    setTimeout(() => {
+      path.style.transition = 'stroke-dashoffset 1.26s cubic-bezier(0.2, 0, 0.8, 1)';
+      path.style.strokeDashoffset = '0';
+    }, 100);
+  }
+
+  // Start the animation when page loads
+  window.addEventListener('load', () => {
+    setTimeout(animatePath, 500);
+  });
+</script> 
