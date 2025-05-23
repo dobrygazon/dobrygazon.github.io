@@ -1,6 +1,6 @@
 --- 
 
-title: "How I Scaled SEO Traffic 30x"
+title: "30x Growth Initiative"
 description: "Keyword research, templated content, and automation to generate 10K+ landing pages."
 date: "May 10 2025"
 thumbnail: "/lighthouse.png"
