@@ -1,0 +1,124 @@
+<div class="competitive-positioning-wrapper">
+  <div class="radar">
+    <div class="line"></div>
+    <div class="check">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <path d="M5 15 L12 22 L25 8" stroke="#00ffc8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="cross cross1">
+      <svg width="10" height="10" viewBox="0 0 10 10">
+        <line x1="0" y1="0" x2="10" y2="10" stroke="#ff4444" stroke-width="1.5"/>
+        <line x1="0" y1="10" x2="10" y2="0" stroke="#ff4444" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="cross cross2">
+      <svg width="10" height="10" viewBox="0 0 10 10">
+        <line x1="0" y1="0" x2="10" y2="10" stroke="#ff4444" stroke-width="1.5"/>
+        <line x1="0" y1="10" x2="10" y2="0" stroke="#ff4444" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<style>
+  .competitive-positioning-wrapper {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a3b47, #2c5a6b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px 7px 0px 0px;
+  }
+  
+  .radar {
+    position: relative;
+    width: 154px;
+    height: 154px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4a7c8a, #6ba0b0);
+    background-position: center;
+    background-size: 100% 100%, 6% 6%;
+    border: 2px solid rgba(0, 255, 100, 0.4);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .radar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.05) 50%, 
+      rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 50%;
+  }
+  
+  .line {
+    position: absolute;
+    width: 2px;
+    height: 77px;
+    background: linear-gradient(180deg, 
+      rgba(0, 255, 100, 0.8) 0%, 
+      rgba(0, 255, 100, 0.4) 70%, 
+      transparent 100%);
+    top: 0;
+    left: 50%;
+    transform-origin: bottom;
+    animation: rotateClockwise 1.8s linear forwards;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 100, 0.6));
+  }
+  
+  @keyframes rotateClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .check {
+    position: absolute;
+    left: 31px;
+    top: 66px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 1.35s;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 200, 0.6));
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .cross {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 0.6s ease forwards;
+    filter: drop-shadow(0 0 4px rgba(255, 68, 68, 0.7));
+    z-index: 999;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .cross1 {
+    right: 20px;
+    top: 72px;
+    animation-delay: 0.4s;
+  }
+  
+  .cross2 {
+    right: 66px;
+    top: 129px;
+    animation-delay: 0.9s;
+  }
+</style> 
