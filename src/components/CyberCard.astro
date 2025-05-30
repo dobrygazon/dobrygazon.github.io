@@ -161,9 +161,34 @@
     setTimeout(animatePath, 500);
   }
 
+  // Function to reset animation
+  function resetAnimation() {
+    const element = document.getElementById('chartPath');
+    if (!element) return;
+    
+    const path = element as unknown as SVGPathElement;
+    const pathLength = path.getTotalLength();
+    
+    path.style.opacity = '0';
+    path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+    path.style.strokeDashoffset = `${pathLength}`;
+    path.style.transition = 'none';
+  }
+
   // Handle initial page load
   window.addEventListener('load', initializeAnimation);
 
   // Handle navigation events
   document.addEventListener('astro:page-load', initializeAnimation);
+
+  // Handle hover events
+  document.addEventListener('DOMContentLoaded', () => {
+    const card = document.querySelector('.cyber-card-wrapper');
+    if (card) {
+      card.addEventListener('mouseenter', () => {
+        resetAnimation();
+        setTimeout(animatePath, 100);
+      });
+    }
+  });
 </script> 
