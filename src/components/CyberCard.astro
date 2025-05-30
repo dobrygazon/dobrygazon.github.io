@@ -156,8 +156,14 @@
     }, 100);
   }
 
-  // Start the animation when page loads
-  window.addEventListener('load', () => {
+  // Function to handle both initial load and navigation
+  function initializeAnimation() {
     setTimeout(animatePath, 500);
-  });
+  }
+
+  // Handle initial page load
+  window.addEventListener('load', initializeAnimation);
+
+  // Handle navigation events
+  document.addEventListener('astro:page-load', initializeAnimation);
 </script> 
