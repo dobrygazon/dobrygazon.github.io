@@ -189,14 +189,8 @@
     }
   }
 
-  // Handle initial page load
-  window.addEventListener('load', initializeAnimation);
-
-  // Handle navigation events
-  document.addEventListener('astro:page-load', initializeAnimation);
-
-  // Handle hover events
-  document.addEventListener('DOMContentLoaded', () => {
+  // Function to set up hover event listener
+  function setupHoverListener() {
     const card = document.querySelector('.competitive-positioning-wrapper');
     if (card) {
       card.addEventListener('mouseenter', () => {
@@ -204,5 +198,17 @@
         setTimeout(initializeAnimation, 100);
       });
     }
+  }
+
+  // Handle initial page load
+  window.addEventListener('load', () => {
+    initializeAnimation();
+    setupHoverListener();
+  });
+
+  // Handle navigation events
+  document.addEventListener('astro:page-load', () => {
+    initializeAnimation();
+    setupHoverListener();
   });
 </script> 
