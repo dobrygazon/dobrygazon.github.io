@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import CyberCard from "./CyberCard.astro";
 import TrafficCard from "./TrafficCard.astro";
 import CompetitivePositioningCard from "./CompetitivePositioningCard.astro";
+import GithubLogoAnimation from "./GithubLogoAnimation.astro";
 
 type Props = {
   entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
@@ -14,10 +15,11 @@ const hasThumbnail = isProject && entry.data.thumbnail;
 const isGrowthInitiative = isProject && entry.data.title === "30x Growth Initiative";
 const isTrafficLoss = isProject && entry.data.title === "Traffic Loss Disaster Recovery";
 const isCompetitivePositioning = isProject && entry.data.title === "Competitive Positioning";
+const isStargaze = isProject && entry.data.title === "Project 'Stargaze'";
 ---
 
 <a href={`/${entry.collection}/${entry.slug}`} class="group flex flex-col rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
-  {hasThumbnail && !isGrowthInitiative && !isTrafficLoss && !isCompetitivePositioning && (
+  {hasThumbnail && !isGrowthInitiative && !isTrafficLoss && !isCompetitivePositioning && !isStargaze && (
     <div class="w-full">
       <img 
         src={entry.data.thumbnail} 
@@ -39,6 +41,11 @@ const isCompetitivePositioning = isProject && entry.data.title === "Competitive 
   {isCompetitivePositioning && (
     <div class="w-full h-48">
       <CompetitivePositioningCard />
+    </div>
+  )}
+  {isStargaze && (
+    <div class="w-full h-48">
+      <GithubLogoAnimation />
     </div>
   )}
   <div class="flex flex-col p-4">
