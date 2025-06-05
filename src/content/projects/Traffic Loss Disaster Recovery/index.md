@@ -2,7 +2,7 @@
 
 title: "Traffic Loss Disaster Recovery"
 description: "Engineering Through an SEO Catastrophe"
-date: "May 17 2025"
+date: "May 12 2025"
 thumbnail: "/lighthouse.png"
 
 ---
@@ -25,7 +25,7 @@ We prioritized developer experience, but along the way, made critical missteps t
 
 Google's manual "Request Indexing" tool worked, but clicking through 7,000 URLs individually wasn't feasible. We needed automation.
 
-Together with a web developer from my team, we built a custom system using **Google’s Indexing API**—originally designed for job postings and live events, but effective for regular content when implemented correctly.
+Together with a web developer from my team, we built a custom system using **Google's Indexing API**—originally designed for job postings and live events, but effective for regular content when implemented correctly.
 
 The system operated in **three stages**. 
 
