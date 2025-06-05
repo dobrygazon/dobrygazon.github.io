@@ -156,9 +156,19 @@
     }, 100);
   }
 
-  // Function to handle both initial load and navigation
-  function initializeAnimation() {
-    setTimeout(animatePath, 500);
+  // Function to set final state immediately
+  function setFinalState() {
+    const element = document.getElementById('chartPath');
+    if (!element) return;
+    
+    const path = element as unknown as SVGPathElement;
+    const pathLength = path.getTotalLength();
+    
+    // Set final state immediately
+    path.style.opacity = '1';
+    path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+    path.style.strokeDashoffset = '0';
+    path.style.transition = 'none';
   }
 
   // Function to reset animation
@@ -188,13 +198,13 @@
 
   // Handle initial page load
   window.addEventListener('load', () => {
-    initializeAnimation();
+    setFinalState();
     setupHoverListener();
   });
 
   // Handle navigation events
   document.addEventListener('astro:page-load', () => {
-    initializeAnimation();
+    setFinalState();
     setupHoverListener();
   });
 </script> 

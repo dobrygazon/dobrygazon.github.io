@@ -123,6 +123,20 @@
         }
     }
 
+    function setFinalState() {
+        const path = document.querySelector('.github-path') as SVGPathElement;
+
+        if (path) {
+            const pathLength = path.getTotalLength();
+            
+            // Set final state immediately
+            path.style.opacity = '1';
+            path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+            path.style.strokeDashoffset = '0';
+            path.style.transition = 'none';
+        }
+    }
+
     function resetAnimation() {
         const path = document.querySelector('.github-path') as SVGPathElement;
 
@@ -147,13 +161,13 @@
 
     // Handle initial page load
     window.addEventListener('load', () => {
-        setTimeout(initializeAnimation, 500);
+        setFinalState();
         setupHoverListener();
     });
 
     // Handle navigation events (for Astro)
     document.addEventListener('astro:page-load', () => {
-        setTimeout(initializeAnimation, 500);
+        setFinalState();
         setupHoverListener();
     });
 </script> 

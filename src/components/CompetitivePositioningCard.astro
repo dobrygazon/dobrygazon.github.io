@@ -159,6 +159,34 @@
     }
   }
 
+  // Function to set final state immediately
+  function setFinalState() {
+    const line = document.querySelector('.line') as HTMLElement;
+    const check = document.querySelector('.check') as HTMLElement;
+    const cross1 = document.querySelector('.cross1') as HTMLElement;
+    const cross2 = document.querySelector('.cross2') as HTMLElement;
+
+    if (line) {
+      line.style.animation = 'none';
+      line.style.transform = 'rotate(360deg)';
+    }
+
+    if (check) {
+      check.style.animation = 'none';
+      check.style.opacity = '1';
+    }
+
+    if (cross1) {
+      cross1.style.animation = 'none';
+      cross1.style.opacity = '0';
+    }
+
+    if (cross2) {
+      cross2.style.animation = 'none';
+      cross2.style.opacity = '0';
+    }
+  }
+
   // Function to reset animation
   function resetAnimation() {
     const line = document.querySelector('.line') as HTMLElement;
@@ -202,13 +230,13 @@
 
   // Handle initial page load
   window.addEventListener('load', () => {
-    initializeAnimation();
+    setFinalState();
     setupHoverListener();
   });
 
   // Handle navigation events
   document.addEventListener('astro:page-load', () => {
-    initializeAnimation();
+    setFinalState();
     setupHoverListener();
   });
 </script> 
