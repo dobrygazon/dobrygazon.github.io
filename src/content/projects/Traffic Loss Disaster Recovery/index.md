@@ -1,7 +1,7 @@
 --- 
 
 title: "Traffic Loss Disaster Recovery"
-description: "Engineering Through an SEO Catastrophe"
+description: "Engineering through an SEO catastrophe. Post-mortem after sudden organic collapse."
 date: "May 12 2025"
 thumbnail: "/lighthouse.png"
 
@@ -38,7 +38,7 @@ The system operated in **three stages**.
 
 Four principles emerged from this recovery that shaped how I approach technical challenges.
 
-1. Systems beat campaigns. A script running daily accomplished more than any one-time SEO audit or manual fix. Automation scales; manual processes don't.
+1. **Systems beat campaigns.** A script running daily accomplished more than any one-time SEO audit or manual fix. Automation scales; manual processes don't.
 2. **Crawl activity is key**. Google's daily crawled URLs jumped from under 100 to over 2,500—a **25x increase** that indicated restored trust in our site architecture.
 3. **Treat infrastructure as a product constraint**. Crawl budget became our primary resource, just like API rate limits or database connections. Understanding Google's crawling behavior helped us optimize for the constraint that actually mattered.
 4. **Accept short-term pain for long-term compounding**. The new Gatsby stack was objectively better—faster builds, better developer experience, modern tooling. It just needed systematic nurturing back to visibility.

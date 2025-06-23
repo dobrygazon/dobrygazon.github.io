@@ -7,4 +7,4 @@ thumbnail: "/competitive-lanscape.png"
 
 ---
 
-### TO-DO
+### Work in progress 🛠️

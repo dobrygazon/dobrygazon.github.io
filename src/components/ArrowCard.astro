@@ -1,13 +1,8 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import CyberCard from "./CyberCard.astro";
 import TrafficCard from "./TrafficCard.astro";
 import CompetitivePositioningCard from "./CompetitivePositioningCard.astro";
 import GithubLogoAnimation from "./GithubLogoAnimation.astro";
-
-type Props = {
-  entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
-}
 
 const { entry } = Astro.props;
 const isProject = entry.collection === "projects";

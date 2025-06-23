@@ -1,7 +1,7 @@
 --- 
 
 title: "Project 'Stargaze'"
-description: "Analyzed 34K CAD/CAM/CAE GitHub stargazers to refine messaging and target positioning."
+description: "Analyzed 34K CAD/CAM/CAE GitHub stargazers to refine messaging."
 date: "June 06 2025"
 thumbnail: "/GitHub__headpic.webp"
 
