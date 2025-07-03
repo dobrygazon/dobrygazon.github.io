@@ -43,6 +43,16 @@ article {
   @apply prose-headings:text-black prose-headings:dark:text-white;
 }
 
+@media (prefers-color-scheme: dark) {
+  html.dark .prose p {
+    color: #e0e3e8;
+  }
+}
+
+html .prose p {
+  color: #222426;
+}
+
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;
