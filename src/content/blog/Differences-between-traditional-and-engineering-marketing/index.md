@@ -7,6 +7,11 @@ draft: false
 
 ## 1. Responsibility
 
+
+
+
+![ChatGPT can make mistakes](./chagpt_can_make_mistakes.png)
+
 “ChatGPT can make mistakes.”
 
 That disclaimer shifts responsibility away from the tool and onto the user. In most consumer software, that’s acceptable. In engineering software, it’s a dealbreaker.
