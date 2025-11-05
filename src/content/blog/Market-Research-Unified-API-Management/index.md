@@ -65,7 +65,7 @@ I suggest the following strategies:
 ## Three Vendors Reshaping the API Management Landscape
 The API Management space is seeing significant evolution, with recent Gartner Magic Quadrant reports revealing key players making substantial moves. These shifts represent fundamental changes in how vendors approach managing enterprise API ecosystems at scale.
 
-![Gartner top 3 movers in 2025](.\gartner_2025.png)
+![Gartner top 3 movers in 2025](./gartner_2025.png)
 
 - **Boomi: The M&A-Powered Leader**
 Boomi's ascent from Niche Player to Leader exemplifies how strategic acquisitions can accelerate market positioning. The purchases of APIIDA and Mashery filled gaps in API lifecycle management and developer experience. By integrating APIIDA's design and governance capabilities with Mashery's gateway infrastructure, Boomi created a platform addressing enterprise API needs. Their AI-centric approach embeds intelligence for API discovery, anomaly detection, and automated governance by default.
@@ -85,7 +85,7 @@ I explored the Gartner Magic Quadrant for Unified API Management and began wonde
 
 To answer these questions, I turned to SEMrush. Out of a total estimated 2.2M monthly visits in the APIM space, Postman attracts roughly 1.6M, while the rest of the market shares the remaining 28.5% ❗ 
 
-![Online precense quadrant](.\quadrant.png)
+![Online precense quadrant](./quadrant.png)
 
 Interestingly, Gartner decreased Postman’s position in 2025 Magic Quadrant — lowering both its completeness of vision and ability to execute.
 
