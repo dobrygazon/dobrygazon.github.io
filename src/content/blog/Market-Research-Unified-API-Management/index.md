@@ -62,3 +62,36 @@ I suggest the following strategies:
 - **Target specific regions:** Prioritize regions where exposure to major vendors is limited due to geopolitics or sanctions, or where API adoption is currently low but growing rapidly, such as emerging economies.
 
 
+## Three Vendors Reshaping the API Management Landscape
+The API Management space is seeing significant evolution, with recent Gartner Magic Quadrant reports revealing key players making substantial moves. These shifts represent fundamental changes in how vendors approach managing enterprise API ecosystems at scale.
+
+![Gartner top 3 movers in 2025](.\gartner_2025.png)
+
+- **Boomi: The M&A-Powered Leader**
+Boomi's ascent from Niche Player to Leader exemplifies how strategic acquisitions can accelerate market positioning. The purchases of APIIDA and Mashery filled gaps in API lifecycle management and developer experience. By integrating APIIDA's design and governance capabilities with Mashery's gateway infrastructure, Boomi created a platform addressing enterprise API needs. Their AI-centric approach embeds intelligence for API discovery, anomaly detection, and automated governance by default.
+
+- **Sensedia: The Vertical Specialist**
+Sensedia's promotion to Challenger status reveals a playbook focused on vertical dominance over horizontal expansion. The company doubled down on financial services in Latin America's Open Finance ecosystem, where regulatory mandates created opportunity. Brazil's Central Bank mandate for Open Banking made API standardization, security, and compliance existential requirements, and Sensedia positioned itself as the infrastructure provider. Their AI Gateway manages LLM-powered applications for financial institutions embedding generative AI into customer experiences.
+
+- **WSO2: The Private Equity Resurgence**
+WSO2's transformation under EQT ownership demonstrates how private equity backing can reignite a mature product's trajectory. The EQT investment injected capital into AI integration, federated governance for multi-cloud environments, and enterprise analytics through the Moesif acquisition. WSO2's architecture allows policy enforcement across AWS, Azure, GCP, and on-premises infrastructure without forcing a centralized chokepoint. The platform appeals to organizations that want control without vendor lock-in.
+
+
+## Online precense
+I explored the Gartner Magic Quadrant for Unified API Management and began wondering how closely those analyst rankings align with online visibility.
+
+1️⃣ Do the “Leaders” in the quadrant also dominate online attention? 
+2️⃣ Does strong digital presence actually translate into market leadership?
+
+To answer these questions, I turned to SEMrush. Out of a total estimated 2.2M monthly visits in the APIM space, Postman attracts roughly 1.6M, while the rest of the market shares the remaining 28.5% ❗ 
+
+![Online precense quadrant](.\quadrant.png)
+
+Interestingly, Gartner decreased Postman’s position in 2025 Magic Quadrant — lowering both its completeness of vision and ability to execute.
+
+That raises an interesting contrast:
+Postman enjoys unmatched online visibility, but faces challenges in turning that awareness into revenue growth. A possible reason lies in its generous free tier (free for teams under three developers), which helps it dominate awareness among developers but makes conversion to paid plans a constant battle.
+
+📊 Data note
+Organic traffic estimates are sourced from SEMrush, which models keyword rankings, Google search volume, and anonymized clickstream data. While directionally accurate for large domains, figures may vary ±20–30%. Use them as relative visibility benchmarks, not exact analytics.
+
