@@ -77,7 +77,7 @@ Sensedia's promotion to Challenger status reveals a playbook focused on vertical
 WSO2's transformation under EQT ownership demonstrates how private equity backing can reignite a mature product's trajectory. The EQT investment injected capital into AI integration, federated governance for multi-cloud environments, and enterprise analytics through the Moesif acquisition. WSO2's architecture allows policy enforcement across AWS, Azure, GCP, and on-premises infrastructure without forcing a centralized chokepoint. The platform appeals to organizations that want control without vendor lock-in.
 
 
-## Online precense
+## Online presence
 I explored the Gartner Magic Quadrant for Unified API Management and began wondering how closely those analyst rankings align with online visibility.
 
 1️⃣ Do the “Leaders” in the quadrant also dominate online attention? 
