@@ -5,6 +5,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
+import Link from "@components/Link.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog"))
@@ -18,9 +19,13 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await post.render();
+const externalLink = post.data.link;
 ---
 
 <PageLayout title={post.data.title} description={post.data.description}>
+  {externalLink && (
+    <meta http-equiv="refresh" content={`0;url=${externalLink}`} />
+  )}
   <Container>
     <div class="animate">
       <BackToPrev href="/blog">
@@ -41,8 +46,19 @@ const { Content } = await post.render();
         {post.data.title}
       </div>
     </div>
-    <article class="animate prose">
-      <Content />
-    </article>
+    {externalLink ? (
+      <div class="animate space-y-4">
+        <p class="text-base text-black/75 dark:text-white/75">
+          This article was published on Communium.
+        </p>
+        <Link href={externalLink} external>
+          Read full article on Communium &rarr;
+        </Link>
+      </div>
+    ) : (
+      <article class="animate prose">
+        <Content />
+      </article>
+    )}
   </Container>
 </PageLayout>
