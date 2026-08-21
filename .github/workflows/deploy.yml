@@ -25,7 +25,7 @@ jobs:
         with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           node-version: 22 # The specific version of Node that should be used to build your site.
-          package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site.
+          package-manager: pnpm@9 # Matches lockfileVersion 9.0 and executes native build scripts seamlessly
 
   deploy:
     needs: build

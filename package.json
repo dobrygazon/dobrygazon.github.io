@@ -36,5 +36,11 @@
   },
   "devDependencies": {
     "@types/nlcst": "^2.0.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
