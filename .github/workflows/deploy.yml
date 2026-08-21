@@ -24,8 +24,9 @@ jobs:
         uses: withastro/action@v3
         with:
           # path: . # The root location of your Astro project inside the repository. (optional)
-          node-version: 22 # The specific version of Node that should be used to build your site.
-          package-manager: pnpm@9 # Matches lockfileVersion 9.0 and executes native build scripts seamlessly
+          node-version: 22
+          package-manager: pnpm@latest
+          args: --allow-scripts=true
 
   deploy:
     needs: build
